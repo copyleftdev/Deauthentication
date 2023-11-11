@@ -1,20 +1,33 @@
-# 무선 네트워크 공격 프로젝트
+# Wireless Network Attack Project
 
-이 프로젝트는 무선 네트워크 보안을 테스트하고 평가하기 위한 간단한 스크립트를 제공합니다. 이 스크립트는 주변 무선 네트워크를 스캔하고, 선택한 네트워크를 대상으로 Deauthentication 공격을 실행할 수 있도록 도와줍니다.
+This project provides a simple script to test and evaluate wireless network security. The script enables scanning of nearby wireless networks and executing a Deauthentication attack on a selected network.
 
-## 사용법
+## Usage
 
-### 1. 사용 가능한 무선 네트워크 인터페이스 확인
+### 1. Checking for Available Wireless Network Interfaces
 
-### 2. 무선 네트워크 스캔 및 대상 네트워크 선택
+The script lists all available wireless network interfaces on the system. Users can select an interface to proceed with network scanning.
 
-## 요구 사항
+### 2. Scanning Wireless Networks and Selecting a Target Network
 
--   Linux 운영 체제 (스크립트는 Linux에서만 동작합니다)
--   필요한 라이브러리 및 도구: `iwconfig`, `iwlist`, `airmon-ng`, `aireplay-ng`
+The script scans for all wireless networks accessible via the selected interface. Users can view the network details and select a target for the Deauthentication attack.
 
-## 주의 사항
+### 3. Executing the Deauthentication Attack
 
--   이 스크립트는 보안 테스트 및 학습 목적으로만 사용해야 합니다.
--   다른 사람의 무선 네트워크를 공격하는 것은 불법이며, 사용 권한이 있는 네트워크에서만 테스트해야 합니다.
--   스크립트를 사용할 때 주의하고, 관련 법률 및 규정을 준수하세요.
+Once a target network is selected, the script initiates a Deauthentication attack, temporarily disrupting the network's wireless connectivity.
+
+## Requirements
+
+- Linux Operating System (The script is designed to work exclusively on Linux)
+- Necessary Libraries and Tools: `iwconfig`, `iwlist`, `airmon-ng`, `aireplay-ng`
+- GNU Parallel (The script checks for this tool and offers to install it if it's not present)
+
+## Installation
+
+The script includes functions to check for required tools (`parallel`, `aircrack-ng suite`) and installs them if they are not available. It supports various package managers like `apt-get`, `yum`, `dnf`, `zypper`, and `pacman` for Linux, and `brew` for macOS.
+
+## Disclaimer
+
+- The script is intended solely for security testing and educational purposes.
+- Attacking other people's wireless networks is illegal, and the script should only be used on networks where you have permission.
+- Exercise caution when using the script and comply with relevant laws and regulations.
